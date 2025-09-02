@@ -7,6 +7,7 @@ import arrow from "../assets/arrow.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function CodingChallengeLanding() {
+    const navigate = useNavigate();
     return (
         <>
             <div className="text-center mt-[40px] mx-[20px] text-center">
