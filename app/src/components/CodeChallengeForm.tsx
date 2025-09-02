@@ -83,27 +83,26 @@ const CodeChallengeForm: React.FC = () => {
     const [fileError, setFileError] = useState<string>('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, type, value } = e.target;
-
-        if (e.target instanceof HTMLInputElement) {
-            if (type === 'checkbox') {
-                setFormData(prevState => ({ ...prevState, [name]: e.target.checked }));
-                return;
-            }
-            if (type === 'file') {
-                const selectedFile = e.target.files ? e.target.files[0] : null;
-                if (selectedFile && selectedFile.size > MAX_FILE_SIZE) {
-                    setFileError('File exceeds the maximum size of 10MB');
-                    setFormData(prevState => ({ ...prevState, [name]: null }));
-                } else {
-                    setFileError('');
-                    setFormData(prevState => ({ ...prevState, [name]: selectedFile }));
-                }
-                return;
+        const target = e.target;
+        const name = target.name;
+    
+        if (target instanceof HTMLInputElement && target.type === 'checkbox') {
+            setFormData(prevState => ({ ...prevState, [name]: target.checked }));
+        }
+        else if (target instanceof HTMLInputElement && target.type === 'file') {
+            const selectedFile = target.files ? target.files[0] : null;
+    
+            if (selectedFile && selectedFile.size > MAX_FILE_SIZE) {
+                setFileError('File exceeds the maximum size of 10MB');
+                setFormData(prevState => ({ ...prevState, [name]: null }));
+            } else {
+                setFileError('');
+                setFormData(prevState => ({ ...prevState, [name]: selectedFile }));
             }
         }
-
-        setFormData(prevState => ({ ...prevState, [name]: value }));
+        else {
+            setFormData(prevState => ({ ...prevState, [name]: target.value }));
+        }
     };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
