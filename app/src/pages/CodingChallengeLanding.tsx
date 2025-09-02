@@ -86,7 +86,7 @@ export default function CodingChallengeLanding() {
                 <p className="mt-[12px] font-[400] text-[16px]">This challenge is not just about coding.<br/> It’s about bringing ideas to life, thinking<br/> outside the box and pushing your limits.</p>
             </div>
 
-            <div className="mt-[68px] text-center">
+            <div className="mt-[68px] mx-[20px] text-center">
                 <CountdownTimer targetDate="2025-09-12T23:59:59" />
             </div>
 
