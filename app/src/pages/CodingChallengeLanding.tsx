@@ -14,7 +14,7 @@ export default function CodingChallengeLanding() {
                 <h1 className="text-[26px] font-[600] font-bold uppercase">Join the</h1>
                 <h1 className="text-[26px] font-[600] font-bold text-[#0E5371] uppercase">Coding Challenge</h1>
 
-                <div className="mt-[24px] w-[50%] mx-auto">
+                <div className="mt-[24px] w-[50%] mx-auto flex justify-center">
                     <img src={landingImg} alt="Coding Challenge" />
                 </div>
 
@@ -30,7 +30,7 @@ export default function CodingChallengeLanding() {
             <div className="mt-[68px] mx-[20px]">
                 <h2 className="text-[22px] font-[500] font-bold text-center">How to Join the Challenge</h2>
                 <p className="mt-[6px] font-[400] text-[16px] text-center">It takes just 3 simple steps to get started!</p>
-                <div className="mt-[24px] font-[400] text-[16px] space-y-[24px] ">
+                <div className="mt-[24px] font-[400] text-[16px] space-y-[24px]">
                     <div className="flex">
                         <p className="flex-shrink-0 text-[26px] font-[400] text-[#FFFFFF] bg-[#0E5371] rounded-[360px] w-[50px] h-[50px] flex items-center justify-center">1</p>
                         <div className="ml-[12px]">
