@@ -169,14 +169,14 @@ const CodeChallengeForm: React.FC = () => {
                             className="w-full mt-2 p-3 bg-gray-100 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
                         ></textarea>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex">
                         <input
                             type="checkbox"
                             id="allowData"
                             name="allowData"
                             checked={formData.allowData}
                             onChange={handleChange}
-                            className="h-4 w-4 rounded accent-[#1d1d1d]"
+                            className="h-5 w-5 mt-[2px] rounded accent-[#1d1d1d]"
                             required
                         />
                         <label htmlFor="allowData" className="ml-[6px] block text-[16px] font-[400] text-[#1D1D1D] opacity-60">
